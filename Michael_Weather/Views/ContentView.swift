@@ -32,7 +32,7 @@ struct ContentView: View {
             self.locationHelper.checkPermission()
             accessAPI()
         }
-        .onChange(of: locationHelper.test, perform: { value in
+        .onChange(of: locationHelper.currentLocation, perform: { value in
             accessAPI()
         })
     }

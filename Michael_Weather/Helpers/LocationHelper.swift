@@ -14,7 +14,7 @@ class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var address : String = "unknown"
     @Published var currentLocation: CLLocation?
-    @Published var test = 0
+    //@Published var test = 0
     
     private let locationManager = CLLocationManager()
     private var lastSeenLocation: CLLocation?
@@ -83,7 +83,7 @@ class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
         print(#function, "current location: \(self.currentLocation!)")
         self.doReverseGeocoding(location: self.currentLocation!, completionHandler: {_,_ in })
         
-        self.test = self.test + 1
+        //self.test = self.test + 1
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
