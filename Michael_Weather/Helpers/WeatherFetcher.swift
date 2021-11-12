@@ -3,6 +3,7 @@
 //  Michael_Weather
 //
 //  Created by Michael Kempe on 2021-11-10.
+//  Student number: 991566501
 //
 
 import Foundation
