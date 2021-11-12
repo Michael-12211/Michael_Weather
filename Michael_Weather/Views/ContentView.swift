@@ -22,7 +22,7 @@ struct ContentView: View {
             Text(fetcher.weather.id)
             if (self.locationHelper.currentLocation != nil){
                 //MyMap(location: self.locationHelper.currentLocation!)
-                Map(coordinateRegion: $region)
+                Map(coordinateRegion: $region, showsUserLocation: true, userTrackingMode: .constant(.follow))
                     .frame(width: 400, height: 300)
             }
             Text("Temperature: \(fetcher.weather.temp, specifier: "%.2f")c")
@@ -55,7 +55,7 @@ struct ContentView: View {
             fetcher.fetchDataFromAPI(coordinates: convCor)
             //updates = updates + 1
             //print ("ran\n\n")
-            self.region.center = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            //self.region.center = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         }else{
             print("Can't access location")
         }
